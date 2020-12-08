@@ -92,5 +92,7 @@ public class ballcontrol : MonoBehaviour
 
         Time.timeScale = 1;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+        FindObjectOfType<AudioManager>().Play("Air Sound");
     }
 }
