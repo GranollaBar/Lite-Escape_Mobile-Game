@@ -50,6 +50,16 @@ public class ballcontrol : MonoBehaviour
         dragStartPos.z = 0f;
         lr.positionCount = 1;
         lr.SetPosition(0, dragStartPos);
+
+        stamina.SetActive(true);
+
+        if (maxStamina <= 0)
+        {
+            stamina.SetActive(false);
+
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+        }
     }
     void Dragging()
     {

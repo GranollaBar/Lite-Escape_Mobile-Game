@@ -31,7 +31,7 @@ public class EffectObject : MonoBehaviour
     IEnumerator waiter()
     {
         //Wait for 4 seconds
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(2.5f);
         SceneManager.LoadScene(respawn);
 
     }

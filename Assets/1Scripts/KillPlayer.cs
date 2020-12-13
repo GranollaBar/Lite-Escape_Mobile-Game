@@ -11,8 +11,13 @@ public class KillPlayer : MonoBehaviour
 
     public ParticleSystem deathParticles;
 
+    private Health healthScript;
+
     void Start()
     {
+        GameObject healthSystem = GameObject.FindGameObjectWithTag("HealthSystem");
+        healthScript = healthSystem.GetComponent<Health>();
+
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
@@ -38,8 +43,13 @@ public class KillPlayer : MonoBehaviour
 
     public void Destroy()
     {
+        healthScript.decreaseHealth();
+
         Instantiate(deathParticles, transform.position, Quaternion.identity);
 
         Destroy(player);
+
+        Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
 }
