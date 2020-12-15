@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Cinemachine
   - HealthSystem
+  - AutoMovePlayer
   layers:
   - Default
   - TransparentFX
