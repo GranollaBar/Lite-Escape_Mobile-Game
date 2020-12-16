@@ -8,6 +8,7 @@ TagManager:
   - Cinemachine
   - HealthSystem
   - AutoMovePlayer
+  - ExitDoor
   layers:
   - Default
   - TransparentFX

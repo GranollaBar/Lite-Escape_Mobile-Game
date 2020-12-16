@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4516434757263752580}
+  - component: {fileID: -7905450067334312562}
   - component: {fileID: 4516434757263752578}
   - component: {fileID: 4516434757263752579}
-  - component: {fileID: -7905450067334312562}
   m_Layer: 0
   m_Name: Player Death
   m_TagString: Untagged
@@ -33,6 +33,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7905450067334312562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4516434757263752581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc1f6e769465c94abc65bc7764a9003, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawn: 0
+  time: 3
+  shakeCamera: 1
+  duration: 1
+  magnitude: 0.5
 --- !u!198 &4516434757263752578
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4871,20 +4888,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &-7905450067334312562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4516434757263752581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bc1f6e769465c94abc65bc7764a9003, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  respawn: 0
-  time: 3
-  shakeCamera: 1
-  duration: 1
-  magnitude: 0.5
