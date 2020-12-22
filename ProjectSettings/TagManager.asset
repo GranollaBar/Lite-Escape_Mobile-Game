@@ -9,6 +9,8 @@ TagManager:
   - HealthSystem
   - AutoMovePlayer
   - ExitDoor
+  - LevelLoader
+  - HealthManager
   layers:
   - Default
   - TransparentFX

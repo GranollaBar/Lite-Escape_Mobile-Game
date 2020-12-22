@@ -27,6 +27,8 @@ public class AutoMovePlayer : MonoBehaviour
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
             moveTo = 20;
             movePlayer = true;
+
+            FindObjectOfType<AudioManager>().Play("Victory Sound");
         }
     }
 
@@ -36,7 +38,7 @@ public class AutoMovePlayer : MonoBehaviour
         if (movePlayer)
         {
             PlayerAutoMove();
-            if (Mathf.Abs(playerPosition.position.x - moveTo) < 2)
+            if (Mathf.Abs(playerPosition.position.x - moveTo) < 0.5)
             {
                 movePlayer = false;
                 playerRb.constraints = RigidbodyConstraints2D.FreezeAll;

@@ -69,8 +69,6 @@ public class ballcontrol : MonoBehaviour
         lr.SetPosition(1, draggingPos);
 
         stamina.SetActive(true);
-		
-	//This is a comment
 
         maxStamina -= staminaLoss = Time.deltaTime;
         staminaBar.value = maxStamina;

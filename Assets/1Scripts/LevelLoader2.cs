@@ -8,9 +8,20 @@ public class LevelLoader2 : MonoBehaviour
 
     public float transitionTime = 1f;
 
+    private GameObject player;
+    private Transform playerPosition;
+
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerPosition = player.GetComponent<Transform>();
+    }
+
+
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (playerPosition.position.x >= 18)
         {
             LoadNextLevel2();
         }
