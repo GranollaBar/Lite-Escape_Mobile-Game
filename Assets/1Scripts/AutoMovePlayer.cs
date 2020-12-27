@@ -8,6 +8,7 @@ public class AutoMovePlayer : MonoBehaviour
     private Transform playerPosition;
     private bool movePlayer = false; 
     private int moveTo;
+    public GameObject stamina;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +24,18 @@ public class AutoMovePlayer : MonoBehaviour
         if (other.gameObject == exitDoor)
         {
             Destroy(player.GetComponent<ballcontrol>());
+            Destroy(player.GetComponent<LineRenderer>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
             moveTo = 20;
             movePlayer = true;
 
-            FindObjectOfType<AudioManager>().Play("Victory Sound");
+            stamina.SetActive(false);
+
+            Time.timeScale = 1;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+            FindObjectOfType<AudioManager>().Play("Clapping Sound");
         }
     }
 

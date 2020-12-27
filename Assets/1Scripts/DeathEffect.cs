@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : MonoBehaviour
+public class DeathEffect : MonoBehaviour
 {
     public Animator transition;
 
@@ -12,7 +12,7 @@ public class LevelLoader : MonoBehaviour
 
     void Update()
     {
-        if (player.transform.position.x >= 500)
+        if (player.transform.position.x >= 1000000000)
         {
             LoadNextLevel();
         }
@@ -25,7 +25,7 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadLevel(int levelIndex)
     {
-        transition.SetTrigger("Fade Start");
+        transition.SetTrigger("DeathStart");
 
         yield return new WaitForSeconds(transitionTime);
 

@@ -11,6 +11,10 @@ public class KillPlayer : MonoBehaviour
 
     private Health healthScript;
 
+    public Animator transition;
+
+    private float transitionTime = 0.5f;
+
     void Start()
     {
         GameObject healthSystem = GameObject.FindGameObjectWithTag("HealthSystem");
@@ -26,7 +30,7 @@ public class KillPlayer : MonoBehaviour
         if (other.gameObject == enemy)
         {
             camInstruction(false);
-            Destroy();
+            StartCoroutine(Destroy());
         }
         
     }
@@ -39,7 +43,7 @@ public class KillPlayer : MonoBehaviour
         cinemachine.enabled = keepGoing;
     }
 
-    public void Destroy()
+    public System.Collections.IEnumerator Destroy()
     {
         healthScript.decreaseHealth();
 
@@ -49,5 +53,8 @@ public class KillPlayer : MonoBehaviour
 
         Time.timeScale = 1;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+        transition.SetTrigger("DeathStart");
+        yield return new WaitForSeconds(transitionTime);
     }
 }
