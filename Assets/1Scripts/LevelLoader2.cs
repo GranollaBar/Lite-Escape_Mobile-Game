@@ -8,20 +8,9 @@ public class LevelLoader2 : MonoBehaviour
 
     public float transitionTime = 1f;
 
-    private GameObject player;
-    private Transform playerPosition;
-
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerPosition = player.GetComponent<Transform>();
-    }
-
-
-
     void Update()
     {
-        if (playerPosition.position.x >= 18)
+        if (Input.touchCount >= 1000000000)
         {
             LoadNextLevel2();
         }
