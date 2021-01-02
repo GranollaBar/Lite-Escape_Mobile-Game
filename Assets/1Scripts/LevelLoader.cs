@@ -6,13 +6,11 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator transition;
 
-    private float transitionTime = 1f;
-
-    public GameObject player;
+    public float transitionTime = 1f;
 
     void Update()
     {
-        if (player.transform.position.x >= 500)
+        if (Input.touchCount >= 1000000000)
         {
             LoadNextLevel();
         }

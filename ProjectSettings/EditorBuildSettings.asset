@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/1Scenes/Main Menu.unity
     guid: 5b41a9c5932c21b41a3f72f44fd07437
   - enabled: 1
+    path: Assets/1Scenes/Help.unity
+    guid: 130f8bd5bd8b72b4d9be81bf90e32a4c
+  - enabled: 1
+    path: Assets/1Scenes/Discord.unity
+    guid: 0db364166d8a7a644857e99bad120f9e
+  - enabled: 1
     path: Assets/1Scenes/Shop.unity
     guid: 20104d9aa3d933c49b7298e2e3f57bf7
+  - enabled: 1
+    path: Assets/1Scenes/Level Selection.unity
+    guid: 612dd7c422c487142ae0e95b724c9e0a
   - enabled: 1
     path: Assets/1Scenes/Level 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
