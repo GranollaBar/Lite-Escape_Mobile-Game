@@ -134,3 +134,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawn: 0
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
+  transition: {fileID: 0}

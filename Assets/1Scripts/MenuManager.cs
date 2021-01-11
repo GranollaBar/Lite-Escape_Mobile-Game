@@ -10,12 +10,10 @@ public class MenuManager : MonoBehaviour
     private float sceneStartTimer = 1.6f;
 
     private bool playClicked = false;
-    private bool shopClicked = false;
     private bool discordClicked = false;
     private bool helpClicked = false;
 
     public ParticleSystem playParticles;
-    public ParticleSystem shopParticles;
     public ParticleSystem discordParticles;
     public ParticleSystem helpParticles;
 
@@ -42,18 +40,8 @@ public class MenuManager : MonoBehaviour
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0) 
             {
-                SceneManager.LoadScene(4);
-                playClicked = false;
-            }
-        }
-
-        if (shopClicked)
-        {
-            sceneStartTimer -= Time.deltaTime;
-            if (sceneStartTimer <= 0)
-            {
                 SceneManager.LoadScene(3);
-                shopClicked = false;
+                playClicked = false;
             }
         }
 
@@ -84,14 +72,6 @@ public class MenuManager : MonoBehaviour
         StartCoroutine(CircleFade());
         playClicked = true;
         Instantiate(playParticles);
-    }
-
-    public void shopMenu()
-    {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        StartCoroutine(CircleFade());
-        shopClicked = true;
-        Instantiate(shopParticles);
     }
 
     public void Instagram()
