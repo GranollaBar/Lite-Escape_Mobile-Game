@@ -16,11 +16,6 @@ public class EffectObject : MonoBehaviour
 
     void Start()
     {
-        FindObjectOfType<CameraShake>().Shake(duration, magnitude);
-
-        //if (shakeCamera)
-        //    FindObjectOfType<CameraShake2>().StartShake(testProperties);
-
         player = GameObject.FindGameObjectWithTag("Player");
         Destroy(player, time);
         StartCoroutine(waiter());
