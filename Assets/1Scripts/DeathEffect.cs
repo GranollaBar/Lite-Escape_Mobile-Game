@@ -12,15 +12,19 @@ public class DeathEffect : MonoBehaviour
 
     void Update()
     {
-        if (player.transform.position.x >= 1000000000)
+        if (player == null)
         {
-            LoadNextLevel();
+            ReloadLevel();
         }
     }
 
     public void LoadNextLevel()
     {
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+    public void ReloadLevel()
+    {
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex));
     }
 
     IEnumerator LoadLevel(int levelIndex)

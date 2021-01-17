@@ -9,17 +9,12 @@ public class KillPlayer : MonoBehaviour
 
     public ParticleSystem deathParticles;
 
-    private Health healthScript;
-
     public Animator transition;
 
     private float transitionTime = 0.5f;
 
     void Start()
     {
-        GameObject healthSystem = GameObject.FindGameObjectWithTag("HealthSystem");
-        healthScript = healthSystem.GetComponent<Health>();
-
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         enemy = GameObject.FindGameObjectWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
@@ -45,8 +40,6 @@ public class KillPlayer : MonoBehaviour
 
     public System.Collections.IEnumerator Destroy()
     {
-        healthScript.decreaseHealth();
-
         Instantiate(deathParticles, transform.position, Quaternion.identity);
 
         Destroy(player);
