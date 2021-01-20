@@ -10,7 +10,9 @@ TagManager:
   - AutoMovePlayer
   - ExitDoor
   - LevelLoader
-  - HealthManager
+  - lights
+  - Wall
+  - arrowLight
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,6 @@ public class KillPlayer : MonoBehaviour
             camInstruction(false);
             StartCoroutine(Destroy());
         }
-        
     }
 
  

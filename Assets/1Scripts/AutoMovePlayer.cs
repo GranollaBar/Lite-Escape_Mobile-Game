@@ -9,6 +9,7 @@ public class AutoMovePlayer : MonoBehaviour
     private bool movePlayer = false; 
     private int moveTo;
     public GameObject stamina;
+    public ParticleSystem confettiParticles;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,8 @@ public class AutoMovePlayer : MonoBehaviour
     {
         if (other.gameObject == exitDoor)
         {
+            Instantiate(confettiParticles, transform.position, Quaternion.identity);
+
             Destroy(player.GetComponent<ballcontrol>());
             Destroy(player.GetComponent<LineRenderer>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
