@@ -13,6 +13,9 @@ TagManager:
   - lights
   - Wall
   - arrowLight
+  - HealthManager
+  - Wall2
+  - Wall3
   layers:
   - Default
   - TransparentFX

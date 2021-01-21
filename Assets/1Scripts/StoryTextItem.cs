@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class TutorialItem 
+public class StoryTextItem
 {
     public Animator textTransition;
     public float titleTime = 1f;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-public class TutorialText : MonoBehaviour
+public class Level1Text : MonoBehaviour
 {
     public Animator titleTransition;
     public Animator text1Transition;
@@ -15,15 +15,6 @@ public class TutorialText : MonoBehaviour
     public Animator text8Transition;
     public Animator text9Transition;
     public Animator text10Transition;
-    public Animator text11Transition;
-    public Animator text12Transition;
-    public Animator text13Transition;
-    public Animator text14Transition;
-    public Animator text15Transition;
-    public Animator text16Transition;
-    public Animator text17Transition;
-    public Animator text18Transition;
-    public Animator text19Transition;
 
     public GameObject titleText;
     public GameObject text1;
@@ -36,15 +27,6 @@ public class TutorialText : MonoBehaviour
     public GameObject text8;
     public GameObject text9;
     public GameObject text10;
-    public GameObject text11;
-    public GameObject text12;
-    public GameObject text13;
-    public GameObject text14;
-    public GameObject text15;
-    public GameObject text16;
-    public GameObject text17;
-    public GameObject text18;
-    public GameObject text19;
 
     private List<StoryTextItem> tutorialItems = new List<StoryTextItem>();
 
@@ -129,69 +111,6 @@ public class TutorialText : MonoBehaviour
         item.titleText = text10;
         tutorialItems.Add(item);
 
-        item = new StoryTextItem();
-        item.textTransition = text11Transition;
-        item.titleTime = 23f;
-        item.transitionTime = 1f;
-        item.titleText = text11;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text12Transition;
-        item.titleTime = 25f;
-        item.transitionTime = 1f;
-        item.titleText = text12;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text13Transition;
-        item.titleTime = 27f;
-        item.transitionTime = 1f;
-        item.titleText = text13;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text14Transition;
-        item.titleTime = 29f;
-        item.transitionTime = 1f;
-        item.titleText = text14;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text15Transition;
-        item.titleTime = 31f;
-        item.transitionTime = 1f;
-        item.titleText = text15;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text16Transition;
-        item.titleTime = 33f;
-        item.transitionTime = 1f;
-        item.titleText = text16;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text17Transition;
-        item.titleTime = 35f;
-        item.transitionTime = 1f;
-        item.titleText = text17;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text18Transition;
-        item.titleTime = 37f;
-        item.transitionTime = 1f;
-        item.titleText = text18;
-        tutorialItems.Add(item);
-
-        item = new StoryTextItem();
-        item.textTransition = text19Transition;
-        item.titleTime = 39f;
-        item.transitionTime = 1f;
-        item.titleText = text19;
-        tutorialItems.Add(item);
-
         DisableAllText();
         timer.Start();
     }
@@ -209,7 +128,7 @@ public class TutorialText : MonoBehaviour
             {
                 DisableAllText();
                 tutItem.titleText.SetActive(true);
-                tutItem.alreadyShown = true; 
+                tutItem.alreadyShown = true;
             }
         }
     }
