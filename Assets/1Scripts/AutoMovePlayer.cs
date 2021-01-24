@@ -30,7 +30,7 @@ public class AutoMovePlayer : MonoBehaviour
             Destroy(player.GetComponent<LineRenderer>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
-            moveTo = 20;
+            moveTo = 100;
             movePlayer = true;
 
             stamina.SetActive(false);
@@ -38,6 +38,7 @@ public class AutoMovePlayer : MonoBehaviour
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
+            FindObjectOfType<AudioManager>().Play("Victory");
             FindObjectOfType<AudioManager>().Play("Clapping Sound");
         }
     }
