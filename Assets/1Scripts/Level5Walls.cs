@@ -5,7 +5,7 @@ public class Level5Walls : MonoBehaviour
     public GameObject wall1;
 
     float wallCurrentTime = 0f;
-    float wallTime = 5f;
+    float wallTime = 10f;
 
     bool wallDone = false;
 

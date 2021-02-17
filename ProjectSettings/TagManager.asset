@@ -11,9 +11,10 @@ TagManager:
   - ExitDoor
   - LevelLoader
   - lights
-  - Wall
   - arrowLight
   - HealthManager
+  - Wall
+  - Wall1
   - Wall2
   - Wall3
   layers:

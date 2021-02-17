@@ -6,9 +6,11 @@ public class Level5Text : MonoBehaviour
 {
     public Animator titleTransition;
     public Animator text1Transition;
+    public Animator text2Transition;
 
     public GameObject titleText;
     public GameObject text1;
+    public GameObject text2;
 
     private List<StoryTextItem> tutorialItems = new List<StoryTextItem>();
 
@@ -28,6 +30,13 @@ public class Level5Text : MonoBehaviour
         item.titleTime = 3f;
         item.transitionTime = 1f;
         item.titleText = text1;
+        tutorialItems.Add(item);
+
+        item = new StoryTextItem();
+        item.textTransition = text2Transition;
+        item.titleTime = 5f;
+        item.transitionTime = 1f;
+        item.titleText = text2;
         tutorialItems.Add(item);
 
         DisableAllText();

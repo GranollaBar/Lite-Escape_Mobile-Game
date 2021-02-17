@@ -51,7 +51,7 @@ public class LightsFlash : MonoBehaviour
 
     public void Countdown()
     {
-        if (timer.ElapsedMilliseconds >= 2000)
+        if (timer.ElapsedMilliseconds >= 1500)
         {
             light1.SetActive(true);
             light2.SetActive(true);
@@ -71,7 +71,7 @@ public class LightsFlash : MonoBehaviour
             light16.SetActive(true);
         }
 
-        if (timer.ElapsedMilliseconds >= 4000)
+        if (timer.ElapsedMilliseconds >= 3500)
         {
             light1.SetActive(false);
             light2.SetActive(false);
