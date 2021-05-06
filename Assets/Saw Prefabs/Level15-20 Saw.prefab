@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6286661237024507257}
   - component: {fileID: 6677567949693715129}
   m_Layer: 0
-  m_Name: circular-saw-blades01 (4)
+  m_Name: Level15-20 Saw
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5708982899044497411}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.89051, y: 6.22369, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

@@ -63,6 +63,9 @@ TagManager:
   - name: Saw Blades
     uniqueID: 3719856029
     locked: 0
+  - name: Stamina Bar
+    uniqueID: 3757347587
+    locked: 0
   - name: Foreground
     uniqueID: 1241919633
     locked: 0

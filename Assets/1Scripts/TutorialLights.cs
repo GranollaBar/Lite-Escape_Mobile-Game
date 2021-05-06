@@ -8,8 +8,8 @@ public class TutorialLights : MonoBehaviour
 
     float lightsCurrentTime = 0f;
     float wallCurrentTime = 0f;
-    float lightsTime = 26f;
-    float wallTime = 79f;
+    float lightsTime = 24f;
+    float wallTime = 77f;
 
     bool startedSounds = false;
     bool wallDone = false;

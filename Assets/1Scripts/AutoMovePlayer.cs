@@ -4,6 +4,7 @@ public class AutoMovePlayer : MonoBehaviour
 {
     private GameObject exitDoor;
     private GameObject player;
+    private GameObject lights;
     private Rigidbody2D playerRb;
     private Transform playerPosition;
     private bool movePlayer = false; 
@@ -16,6 +17,7 @@ public class AutoMovePlayer : MonoBehaviour
     {
         exitDoor = GameObject.FindGameObjectWithTag("ExitDoor");
         player = GameObject.FindGameObjectWithTag("Player");
+        lights = GameObject.FindGameObjectWithTag("arrowLight");
         playerRb = player.GetComponent<Rigidbody2D>();
         playerPosition = player.GetComponent<Transform>();
     }
@@ -26,11 +28,12 @@ public class AutoMovePlayer : MonoBehaviour
         {
             Instantiate(confettiParticles, transform.position, Quaternion.identity);
 
+            lights.SetActive(false);
             Destroy(player.GetComponent<ballcontrol>());
             Destroy(player.GetComponent<LineRenderer>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
-            moveTo = 100;
+            moveTo = 150;
             movePlayer = true;
 
             stamina.SetActive(false);
