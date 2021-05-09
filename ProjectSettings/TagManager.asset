@@ -69,3 +69,6 @@ TagManager:
   - name: Foreground
     uniqueID: 1241919633
     locked: 0
+  - name: Death Fade
+    uniqueID: 3826227409
+    locked: 0

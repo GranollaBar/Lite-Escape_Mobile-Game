@@ -5054,20 +5054,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 850070865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb02ea67f62bfb649a42c01cb9e442a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 0468d6dcf7802a44583b0fa9f0db3599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light1: {fileID: 1573904394}
-  light2: {fileID: 1675682192}
-  light3: {fileID: 1674822533}
-  light4: {fileID: 1145065162}
-  light5: {fileID: 288842232}
-  light6: {fileID: 1511415883}
-  light7: {fileID: 1519235350}
-  light8: {fileID: 58265637}
-  light9: {fileID: 1405080518}
-  light10: {fileID: 2136700771}
-  light11: {fileID: 2100093399}
+  light1: {fileID: 0}
+  light2: {fileID: 0}
+  light3: {fileID: 0}
+  light4: {fileID: 0}
+  light5: {fileID: 0}
+  light6: {fileID: 0}
+  light7: {fileID: 0}
+  light8: {fileID: 0}
+  light9: {fileID: 0}
+  light10: {fileID: 0}
+  light11: {fileID: 0}
 --- !u!4 &850070867
 Transform:
   m_ObjectHideFlags: 0

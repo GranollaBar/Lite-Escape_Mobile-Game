@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
 
-public class LightsFlash16 : MonoBehaviour
+public class LightsFlash6 : MonoBehaviour
 {
     public GameObject light1;
     public GameObject light2;
@@ -12,8 +12,6 @@ public class LightsFlash16 : MonoBehaviour
     public GameObject light7;
     public GameObject light8;
     public GameObject light9;
-    public GameObject light10;
-    public GameObject light11;
 
     private Stopwatch timer = new Stopwatch();
 
@@ -28,8 +26,6 @@ public class LightsFlash16 : MonoBehaviour
         light7.SetActive(false);
         light8.SetActive(false);
         light9.SetActive(false);
-        light10.SetActive(false);
-        light11.SetActive(false);
 
         timer.Start();
     }
@@ -52,8 +48,6 @@ public class LightsFlash16 : MonoBehaviour
             light7.SetActive(true);
             light8.SetActive(true);
             light9.SetActive(true);
-            light10.SetActive(true);
-            light11.SetActive(true);
         }
 
         if (timer.ElapsedMilliseconds >= 3500)
@@ -67,8 +61,6 @@ public class LightsFlash16 : MonoBehaviour
             light7.SetActive(false);
             light8.SetActive(false);
             light9.SetActive(false);
-            light10.SetActive(false);
-            light11.SetActive(false);
 
             timer.Restart();
         }
