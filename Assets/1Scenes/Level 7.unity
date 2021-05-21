@@ -1406,7 +1406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c2785872e85d54ea103ffac3334a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wall1: {fileID: 0}
+  wall1: {fileID: 1798089700}
 --- !u!4 &363216618
 Transform:
   m_ObjectHideFlags: 0
@@ -14507,7 +14507,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1700
+  m_PointLightOuterRadius: 17
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using UnityEngine;
 
-public class LightsFlash10 : MonoBehaviour
+public class LightsFlash9 : MonoBehaviour
 {
     public GameObject light1;
     public GameObject light2;
@@ -16,6 +16,12 @@ public class LightsFlash10 : MonoBehaviour
     public GameObject light11;
     public GameObject light12;
     public GameObject light13;
+    public GameObject light14;
+    public GameObject light15;
+    public GameObject light16;
+    public GameObject light17;
+    public GameObject light18;
+    public GameObject light19;
 
     private Stopwatch timer = new Stopwatch();
 
@@ -34,6 +40,12 @@ public class LightsFlash10 : MonoBehaviour
         light11.SetActive(false);
         light12.SetActive(false);
         light13.SetActive(false);
+        light14.SetActive(false);
+        light15.SetActive(false);
+        light16.SetActive(false);
+        light17.SetActive(false);
+        light18.SetActive(false);
+        light19.SetActive(false);
 
         timer.Start();
     }
@@ -60,6 +72,12 @@ public class LightsFlash10 : MonoBehaviour
             light11.SetActive(true);
             light12.SetActive(true);
             light13.SetActive(true);
+            light14.SetActive(true);
+            light15.SetActive(true);
+            light16.SetActive(true);
+            light17.SetActive(true);
+            light18.SetActive(true);
+            light19.SetActive(true);
         }
 
         if (timer.ElapsedMilliseconds >= 3500)
@@ -77,6 +95,12 @@ public class LightsFlash10 : MonoBehaviour
             light11.SetActive(false);
             light12.SetActive(false);
             light13.SetActive(false);
+            light14.SetActive(false);
+            light15.SetActive(false);
+            light16.SetActive(false);
+            light17.SetActive(false);
+            light18.SetActive(false);
+            light19.SetActive(false);
 
             timer.Restart();
         }
