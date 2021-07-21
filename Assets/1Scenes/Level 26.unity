@@ -288,7 +288,7 @@ MonoBehaviour:
   m_ScreenY: 0.5
   m_CameraDistance: 791.95
   m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0.28
+  m_DeadZoneHeight: 0.1
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
@@ -3760,6 +3760,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 8ec270acc7adbda40bf72a01186c7e2e, type: 3}
     volume: 0.7
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: WallBreak
+    clip: {fileID: 8300000, guid: 17d985336e68c6145af64eb477f49896, type: 3}
+    volume: 0.3
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &1120314837

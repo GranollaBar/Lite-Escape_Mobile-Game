@@ -2,8 +2,7 @@
 
 public class KillPlayer : MonoBehaviour
 {
-    public int respawn;
-    private GameObject enemy;
+    private GameObject[] enemy;
     private GameObject player;
     private GameObject cam;
 
@@ -11,21 +10,24 @@ public class KillPlayer : MonoBehaviour
 
     public Animator transition;
 
-    private float transitionTime = 0.5f;
+    private float transitionTime = 1f;
 
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemy = GameObject.FindGameObjectsWithTag("Enemy");
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject == enemy)
+        for (int i =0; i < enemy.Length; i++)
         {
-            camInstruction(false);
-            StartCoroutine(Destroy());
+            if (other.gameObject == enemy[i])
+            {
+                camInstruction(false);
+                StartCoroutine(Destroy());
+            }
         }
     }
 

@@ -2,7 +2,7 @@
 
 public class Level5Walls : MonoBehaviour
 {
-    public GameObject wall1;
+    private GameObject wall1;
 
     float wallCurrentTime = 0f;
     float wallTime = 10f;
@@ -28,6 +28,7 @@ public class Level5Walls : MonoBehaviour
             {
                 wall1.SetActive(false);
                 wallDone = true;
+                FindObjectOfType<AudioManager>().Play("WallBreak");
             }
         }
     }

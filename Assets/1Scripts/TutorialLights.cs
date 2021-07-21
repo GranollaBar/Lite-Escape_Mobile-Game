@@ -8,8 +8,8 @@ public class TutorialLights : MonoBehaviour
 
     float lightsCurrentTime = 0f;
     float wallCurrentTime = 0f;
-    float lightsTime = 24f;
-    float wallTime = 77f;
+    float lightsTime = 25f;
+    float wallTime = 55f;
 
     bool startedSounds = false;
     bool wallDone = false;
@@ -22,7 +22,7 @@ public class TutorialLights : MonoBehaviour
         wall = GameObject.FindGameObjectWithTag("Wall");
         wall.SetActive(true);
 
-        arrowLight = GameObject.FindGameObjectWithTag("arrowLight");
+        arrowLight = GameObject.FindGameObjectWithTag("MainLights");
         arrowLight.SetActive(false);
 
         lightsCurrentTime = lightsTime;
@@ -52,6 +52,7 @@ public class TutorialLights : MonoBehaviour
             if (wallCurrentTime <= 0)
             {
                 FindObjectOfType<AudioManager>().Play("Lights");
+                FindObjectOfType<AudioManager>().Play("WallBreak");
                 wall.SetActive(false);
                 lights.SetActive(false);
                 arrowLight.SetActive(true);

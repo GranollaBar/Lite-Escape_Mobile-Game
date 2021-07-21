@@ -21,18 +21,6 @@ public class LightsFlash25 : MonoBehaviour
     public GameObject light16;
     public GameObject light17;
     public GameObject light18;
-    public GameObject light19;
-    public GameObject light20;
-    public GameObject light21;
-    public GameObject light22;
-    public GameObject light23;
-    public GameObject light24;
-    public GameObject light25;
-    public GameObject light26;
-    public GameObject light27;
-    public GameObject light28;
-    public GameObject light29;
-    public GameObject light30;
 
     private Stopwatch timer = new Stopwatch();
 
@@ -56,18 +44,6 @@ public class LightsFlash25 : MonoBehaviour
         light16.SetActive(false);
         light17.SetActive(false);
         light18.SetActive(false);
-        light19.SetActive(false);
-        light20.SetActive(false);
-        light21.SetActive(false);
-        light22.SetActive(false);
-        light23.SetActive(false);
-        light24.SetActive(false);
-        light25.SetActive(false);
-        light26.SetActive(false);
-        light27.SetActive(false);
-        light28.SetActive(false);
-        light29.SetActive(false);
-        light30.SetActive(false);
 
         timer.Start();
     }
@@ -99,18 +75,6 @@ public class LightsFlash25 : MonoBehaviour
             light16.SetActive(true);
             light17.SetActive(true);
             light18.SetActive(true);
-            light19.SetActive(true);
-            light20.SetActive(true);
-            light21.SetActive(true);
-            light22.SetActive(true);
-            light23.SetActive(true);
-            light24.SetActive(true);
-            light25.SetActive(true);
-            light26.SetActive(true);
-            light27.SetActive(true);
-            light28.SetActive(true);
-            light29.SetActive(true);
-            light30.SetActive(true);
         }
 
         if (timer.ElapsedMilliseconds >= 3500)
@@ -133,18 +97,6 @@ public class LightsFlash25 : MonoBehaviour
             light16.SetActive(false);
             light17.SetActive(false);
             light18.SetActive(false);
-            light19.SetActive(false);
-            light20.SetActive(false);
-            light21.SetActive(false);
-            light22.SetActive(false);
-            light23.SetActive(false);
-            light24.SetActive(false);
-            light25.SetActive(false);
-            light26.SetActive(false);
-            light27.SetActive(false);
-            light28.SetActive(false);
-            light29.SetActive(false);
-            light30.SetActive(false);
 
             timer.Restart();
         }

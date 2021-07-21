@@ -6,7 +6,7 @@ public class DeathEffect : MonoBehaviour
 {
     public Animator transition;
 
-    private float transitionTime = 1.5f;
+    private float transitionTime = 1.8f;
 
     public GameObject player;
 

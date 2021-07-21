@@ -17,6 +17,11 @@ TagManager:
   - Wall1
   - Wall2
   - Wall3
+  - MainLights
+  - Menu
+  - Test
+  - LevelComplete
+  - AudioManager
   layers:
   - Default
   - TransparentFX
@@ -68,6 +73,15 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1241919633
+    locked: 0
+  - name: Confetti
+    uniqueID: 3298517001
+    locked: 0
+  - name: Level Complete
+    uniqueID: 1549820321
+    locked: 0
+  - name: Circle Fade
+    uniqueID: 3638856659
     locked: 0
   - name: Death Fade
     uniqueID: 3826227409

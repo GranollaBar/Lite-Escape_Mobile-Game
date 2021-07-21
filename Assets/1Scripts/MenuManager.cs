@@ -10,17 +10,26 @@ public class MenuManager : MonoBehaviour
     private float sceneStartTimer = 1.6f;
 
     private bool playClicked = false;
-    private bool discordClicked = false;
-    private bool helpClicked = false;
 
     public ParticleSystem playParticles;
-    public ParticleSystem discordParticles;
-    public ParticleSystem helpParticles;
 
     public GameObject music;
     public GameObject noMusic;
     public GameObject soundEffects;
     public GameObject noSoundEffects;
+
+    public bool Truemusic;
+    public bool TruesoundEffects;
+
+    private GameObject AudioManager;
+
+    private void Start()
+    {
+        Truemusic = true;
+        TruesoundEffects = true;
+
+        AudioManager = GameObject.FindGameObjectWithTag("AudioManager");
+    }
 
     public System.Collections.IEnumerator CircleFade()
     {
@@ -40,28 +49,9 @@ public class MenuManager : MonoBehaviour
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0) 
             {
-                SceneManager.LoadScene(3);
-                playClicked = false;
-            }
-        }
-
-        if (discordClicked)
-        {
-            sceneStartTimer -= Time.deltaTime;
-            if (sceneStartTimer <= 0)
-            {
-                SceneManager.LoadScene(2);
-                discordClicked = false;
-            }
-        }
-
-        if (helpClicked)
-        {
-            sceneStartTimer -= Time.deltaTime;
-            if (sceneStartTimer <= 0)
-            {
+                Destroy(AudioManager);
                 SceneManager.LoadScene(1);
-                helpClicked = false;
+                playClicked = false;
             }
         }
     }
@@ -79,41 +69,12 @@ public class MenuManager : MonoBehaviour
         Application.OpenURL("https://www.instagram.com/granolla__bar/");
     }
 
-    public void discordMenu()
-    {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        StartCoroutine(FlashFade());
-        discordClicked = true;
-        Instantiate(discordParticles);
-    }
-
-    public void helpMenu()
-    {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        StartCoroutine(FlashFade());
-        helpClicked = true;
-        Instantiate(helpParticles);
-    }
-
-    public void playNoMusic()
-    {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        music.SetActive(false);
-        noMusic.SetActive(true);
-    }
-
     public void playMusic()
     {
         FindObjectOfType<AudioManager>().Play("Click Sound");
         music.SetActive(true);
         noMusic.SetActive(false);
-    }
-
-    public void playNoSoundEffects()
-    {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        soundEffects.SetActive(false);
-        noSoundEffects.SetActive(true);
+        Truemusic = true;
     }
 
     public void playSoundEffects()
@@ -121,5 +82,23 @@ public class MenuManager : MonoBehaviour
         FindObjectOfType<AudioManager>().Play("Click Sound");
         soundEffects.SetActive(true);
         noSoundEffects.SetActive(false);
+        TruesoundEffects = true;
+    }
+
+
+    public void playNoMusic()
+    {
+        FindObjectOfType<AudioManager>().Play("Click Sound");
+        music.SetActive(false);
+        noMusic.SetActive(true);
+        Truemusic = false;
+    }
+
+    public void playNoSoundEffects()
+    {
+        FindObjectOfType<AudioManager>().Play("Click Sound");
+        soundEffects.SetActive(false);
+        noSoundEffects.SetActive(true);
+        TruesoundEffects = false;
     }
 }

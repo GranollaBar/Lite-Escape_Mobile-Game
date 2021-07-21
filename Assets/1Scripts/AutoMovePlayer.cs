@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AutoMovePlayer : MonoBehaviour
 {
@@ -8,18 +9,28 @@ public class AutoMovePlayer : MonoBehaviour
     private Rigidbody2D playerRb;
     private Transform playerPosition;
     private bool movePlayer = false; 
-    private int moveTo;
+    public int moveTo;
     public GameObject stamina;
     public ParticleSystem confettiParticles;
+    public Animator levelCompleteTransition;
+    private float levelCompleteTransitionTime = 5f;
+    private int nextSceneLoad;
 
     // Start is called before the first frame update
     void Start()
     {
         exitDoor = GameObject.FindGameObjectWithTag("ExitDoor");
         player = GameObject.FindGameObjectWithTag("Player");
-        lights = GameObject.FindGameObjectWithTag("arrowLight");
+        lights = GameObject.FindGameObjectWithTag("MainLights");
         playerRb = player.GetComponent<Rigidbody2D>();
         playerPosition = player.GetComponent<Transform>();
+        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+    }
+
+    public System.Collections.IEnumerator CompleteLevel()
+    {
+        yield return new WaitForSeconds(levelCompleteTransitionTime);
+        levelCompleteTransition.SetTrigger("Level Complete");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -33,7 +44,6 @@ public class AutoMovePlayer : MonoBehaviour
             Destroy(player.GetComponent<LineRenderer>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
-            moveTo = 150;
             movePlayer = true;
 
             stamina.SetActive(false);
@@ -43,6 +53,13 @@ public class AutoMovePlayer : MonoBehaviour
 
             FindObjectOfType<AudioManager>().Play("Victory");
             FindObjectOfType<AudioManager>().Play("Clapping Sound");
+
+            if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
+            {
+                PlayerPrefs.SetInt("levelAt", nextSceneLoad);
+            }
+
+            StartCoroutine(CompleteLevel());
         }
     }
 

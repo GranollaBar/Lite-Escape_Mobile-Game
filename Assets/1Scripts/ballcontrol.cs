@@ -16,8 +16,14 @@ public class ballcontrol : MonoBehaviour
     public float staminaLoss;
     public GameObject stamina;
 
+    private SpriteRenderer myRenderer;
+    private TrailRenderer myTrailRenderer;
+
     void Start()
     {
+        myRenderer = gameObject.GetComponent<SpriteRenderer>();
+        myTrailRenderer = gameObject.GetComponent<TrailRenderer>();
+
         staminaBar.maxValue = maxStamina;
     }
 
@@ -51,6 +57,11 @@ public class ballcontrol : MonoBehaviour
         lr.positionCount = 1;
         lr.SetPosition(0, dragStartPos);
 
+        myRenderer.color = new Color(0f, 0.8f, 1f);
+
+        myTrailRenderer.startColor = new Color(0f, 0.8f, 1f);
+        myTrailRenderer.endColor = Color.black;
+
         stamina.SetActive(true);
 
         if (maxStamina <= 0)
@@ -67,6 +78,11 @@ public class ballcontrol : MonoBehaviour
         draggingPos.z = 0f;
         lr.positionCount = 2;
         lr.SetPosition(1, draggingPos);
+
+        myRenderer.color = new Color(0f, 0.8f, 1f);
+
+        myTrailRenderer.startColor = new Color(0f, 0.8f, 1f);
+        myTrailRenderer.endColor = Color.black;
 
         stamina.SetActive(true);
 
@@ -95,6 +111,11 @@ public class ballcontrol : MonoBehaviour
         Vector3 ClampedForce = Vector3.ClampMagnitude(force, maxDrag) * power;
 
         rb.AddForce(ClampedForce, ForceMode2D.Impulse);
+
+        myRenderer.color = new Color(1f, 1f, 1f);
+
+        myTrailRenderer.startColor = Color.white;
+        myTrailRenderer.endColor = Color.black;
 
         stamina.SetActive(false);
 
