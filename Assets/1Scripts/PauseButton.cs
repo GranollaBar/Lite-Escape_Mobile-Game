@@ -8,11 +8,18 @@ public class PauseButton : MonoBehaviour
 
     private GameObject player;
     private Rigidbody2D playerRb;
+    public GameObject StaminaBar;
+
+    private SpriteRenderer myRenderer;
+    private TrailRenderer myTrailRenderer;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerRb = player.GetComponent<Rigidbody2D>();
+
+        myRenderer = player.GetComponent<SpriteRenderer>();
+        myTrailRenderer = player.GetComponent<TrailRenderer>();
     }
 
     public System.Collections.IEnumerator PauseFade()
@@ -30,5 +37,16 @@ public class PauseButton : MonoBehaviour
 
         StartCoroutine(PauseFade());
         playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
+        player.GetComponent<ballcontrol>().enabled = false;
+
+        Time.timeScale = 1;
+        Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+        StaminaBar.SetActive(false);
+
+        myRenderer.color = new Color(1f, 1f, 1f);
+
+        myTrailRenderer.startColor = Color.white;
+        myTrailRenderer.endColor = Color.black;
     }
 }

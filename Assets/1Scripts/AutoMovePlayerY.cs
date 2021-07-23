@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AutoMovePlayerY : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class AutoMovePlayerY : MonoBehaviour
     public Animator levelCompleteTransition;
     private float levelCompleteTransitionTime = 5f;
     private int nextSceneLoad;
+    public Button pauseButton;
+    public bool moveUp;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +66,8 @@ public class AutoMovePlayerY : MonoBehaviour
                 PlayerPrefs.SetInt("levelAt", nextSceneLoad);
             }
 
+            pauseButton.GetComponent<Button>().interactable = false;
+
             StartCoroutine(CompleteLevel());
         }
     }
@@ -85,7 +90,12 @@ public class AutoMovePlayerY : MonoBehaviour
     void PlayerAutoMove()
     {
         int moveAmount = 10;
-        Vector3 targetVelocity = new Vector2(moveAmount * 1f, playerRb.velocity.y);
+        if (moveUp)
+        {
+            moveAmount = -10;
+        }
+
+        Vector3 targetVelocity = new Vector2(moveAmount, playerRb.velocity.y);
         Vector3 m_Velocity = Vector3.zero;
         float m_MovementSmoothing = .05f;
         playerRb.velocity = Vector3.SmoothDamp(playerRb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);

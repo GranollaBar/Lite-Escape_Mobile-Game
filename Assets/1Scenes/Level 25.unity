@@ -7641,6 +7641,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3591046333243559341, guid: 3624df17501769945a4d6e4ca4c4b0c5, type: 3}
   m_PrefabInstance: {fileID: 1115506646}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1117341837 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+  m_PrefabInstance: {fileID: 2037241540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d298e9d663e46743b60ee2abbdd3a59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1125764942
 GameObject:
   m_ObjectHideFlags: 0
@@ -10119,7 +10130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2013994454693020690, guid: cd50829b600add54d9c5d4a1972959c5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.9
+      value: -272
       objectReference: {fileID: 0}
     - target: {fileID: 2013994454693020690, guid: cd50829b600add54d9c5d4a1972959c5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12122,10 +12133,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abd652c23df3bfc40a4d065fabf9b098, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTo: -420
+  moveTo: 420
   stamina: {fileID: 1820076760}
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
   levelCompleteTransition: {fileID: 1268639877}
+  pauseButton: {fileID: 2037241541}
+  moveUp: 0
 --- !u!114 &1723713741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17812,6 +17825,17 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &1769623451 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+  m_PrefabInstance: {fileID: 2036825706}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fc8d885a459ca4cab860cebc9e15fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1770218763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18403,7 +18427,7 @@ GameObject:
   - component: {fileID: 1820076761}
   m_Layer: 5
   m_Name: Stamina Bar
-  m_TagString: Untagged
+  m_TagString: StaminaBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20482,6 +20506,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4580023816726280760, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1769623451}
+    - target: {fileID: 4580023816726280760, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: close
+      objectReference: {fileID: 0}
     - target: {fileID: 4580023817052446284, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -20533,11 +20565,15 @@ PrefabInstance:
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: circleTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1472887545}
     - target: {fileID: 4580023817262927676, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 416190809}
+    - target: {fileID: 4580023817262927679, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
 --- !u!95 &2036825707 stripped
@@ -20556,6 +20592,18 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 416190809}
+    - target: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1117341837}
+    - target: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2112453449483695668, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -20605,11 +20653,26 @@ PrefabInstance:
       value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: StaminaBar
+      value: 
+      objectReference: {fileID: 1820076760}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 
       objectReference: {fileID: 2036825707}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+--- !u!114 &2037241541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+  m_PrefabInstance: {fileID: 2037241540}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2047493628
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AutoMovePlayer : MonoBehaviour
 {
@@ -15,8 +16,10 @@ public class AutoMovePlayer : MonoBehaviour
     public Animator levelCompleteTransition;
     private float levelCompleteTransitionTime = 5f;
     private int nextSceneLoad;
+    public Button pauseButton;
+    public bool moveLeft;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         exitDoor = GameObject.FindGameObjectWithTag("ExitDoor");
@@ -63,6 +66,8 @@ public class AutoMovePlayer : MonoBehaviour
                 PlayerPrefs.SetInt("levelAt", nextSceneLoad);
             }
 
+            pauseButton.GetComponent<Button>().interactable = false;
+
             StartCoroutine(CompleteLevel());
         }
     }
@@ -85,6 +90,11 @@ public class AutoMovePlayer : MonoBehaviour
     void PlayerAutoMove()
     {
         int moveAmount = 10;
+        if (moveLeft)
+        {
+            moveAmount = -10;
+        }
+
         Vector3 targetVelocity = new Vector2(moveAmount * 1f, playerRb.velocity.y);
         Vector3 m_Velocity = Vector3.zero;
         float m_MovementSmoothing = .05f;

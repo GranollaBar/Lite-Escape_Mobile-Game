@@ -33,7 +33,10 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("Main Theme");
+        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 0) || (PlayerPrefs.GetInt("NoMusic") == 0))
+        {
+            Play("Main Theme");
+        }
     }
 
     public void Play(string name)

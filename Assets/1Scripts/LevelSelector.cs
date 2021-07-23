@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelSelector : MonoBehaviour
 {
@@ -35,8 +36,38 @@ public class LevelSelector : MonoBehaviour
     private bool Level24Clicked = false;
     private bool Level25Clicked = false;
     private bool Level26Clicked = false;
+    private bool backClicked = false;
 
     private GameObject AudioManager;
+
+    public Button tutorialButton;
+    public Button level1Button;
+    public Button level2Button;
+    public Button level3Button;
+    public Button level4Button;
+    public Button level5Button;
+    public Button level6Button;
+    public Button level7Button;
+    public Button level8Button;
+    public Button level9Button;
+    public Button level10Button;
+    public Button level11Button;
+    public Button level12Button;
+    public Button level13Button;
+    public Button level14Button;
+    public Button level15Button;
+    public Button level16Button;
+    public Button level17Button;
+    public Button level18Button;
+    public Button level19Button;
+    public Button level20Button;
+    public Button level21Button;
+    public Button level22Button;
+    public Button level23Button;
+    public Button level24Button;
+    public Button level25Button;
+    public Button level26Button;
+    public Button backButton;
 
     private void Start()
     {
@@ -53,6 +84,34 @@ public class LevelSelector : MonoBehaviour
     {
         if (tutorialClicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -64,6 +123,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level1Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -75,6 +162,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level2Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -86,6 +201,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level3Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -97,6 +240,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level4Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -108,6 +279,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level5Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -119,6 +318,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level6Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -130,6 +357,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level7Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -141,6 +396,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level8Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -152,6 +435,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level9Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -163,6 +474,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level10Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -174,6 +513,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level11Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -185,6 +552,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level12Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -196,6 +591,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level13Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -207,6 +630,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level14Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -218,6 +669,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level15Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -229,6 +708,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level16Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -240,6 +747,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level17Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -251,6 +786,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level18Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -262,6 +825,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level19Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -273,6 +864,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level20Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -284,6 +903,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level21Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -295,6 +942,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level22Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -306,6 +981,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level23Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -317,6 +1020,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level24Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -328,6 +1059,34 @@ public class LevelSelector : MonoBehaviour
 
         if (Level25Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
@@ -339,12 +1098,79 @@ public class LevelSelector : MonoBehaviour
 
         if (Level26Clicked)
         {
+            backButton.GetComponent<Button>().enabled = false;
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0)
             {
                 Destroy(AudioManager);
                 SceneManager.LoadScene(28);
                 Level26Clicked = false;
+            }
+        }
+
+        if (backClicked)
+        {
+            tutorialButton.GetComponent<Button>().enabled = false;
+            level1Button.GetComponent<Button>().enabled = false;
+            level2Button.GetComponent<Button>().enabled = false;
+            level3Button.GetComponent<Button>().enabled = false;
+            level4Button.GetComponent<Button>().enabled = false;
+            level5Button.GetComponent<Button>().enabled = false;
+            level6Button.GetComponent<Button>().enabled = false;
+            level7Button.GetComponent<Button>().enabled = false;
+            level8Button.GetComponent<Button>().enabled = false;
+            level9Button.GetComponent<Button>().enabled = false;
+            level10Button.GetComponent<Button>().enabled = false;
+            level11Button.GetComponent<Button>().enabled = false;
+            level12Button.GetComponent<Button>().enabled = false;
+            level13Button.GetComponent<Button>().enabled = false;
+            level14Button.GetComponent<Button>().enabled = false;
+            level15Button.GetComponent<Button>().enabled = false;
+            level16Button.GetComponent<Button>().enabled = false;
+            level17Button.GetComponent<Button>().enabled = false;
+            level18Button.GetComponent<Button>().enabled = false;
+            level19Button.GetComponent<Button>().enabled = false;
+            level20Button.GetComponent<Button>().enabled = false;
+            level21Button.GetComponent<Button>().enabled = false;
+            level22Button.GetComponent<Button>().enabled = false;
+            level23Button.GetComponent<Button>().enabled = false;
+            level24Button.GetComponent<Button>().enabled = false;
+            level25Button.GetComponent<Button>().enabled = false;
+            level26Button.GetComponent<Button>().enabled = false;
+
+            sceneStartTimer -= Time.deltaTime;
+            if (sceneStartTimer <= 0)
+            {
+                Destroy(AudioManager);
+                SceneManager.LoadScene(0);
+                backClicked = false;
             }
         }
     }
@@ -644,5 +1470,16 @@ public class LevelSelector : MonoBehaviour
 
         StartCoroutine(CircleFade());
         Level26Clicked = true;
+    }
+
+    public void Back()
+    {
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
+        StartCoroutine(CircleFade());
+        backClicked = true;
     }
 }

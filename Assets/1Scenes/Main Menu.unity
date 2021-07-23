@@ -1162,6 +1162,11 @@ MonoBehaviour:
   noMusic: {fileID: 1788431566}
   soundEffects: {fileID: 738938721}
   noSoundEffects: {fileID: 482493890}
+  instagramButton: {fileID: 1394124577}
+  musicButton: {fileID: 29492552}
+  noMusicButton: {fileID: 1788431567}
+  soundEffectsButton: {fileID: 738938723}
+  noSoundEffectsButton: {fileID: 482493891}
 --- !u!1 &1394124575
 GameObject:
   m_ObjectHideFlags: 0

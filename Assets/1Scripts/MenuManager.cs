@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -20,6 +21,12 @@ public class MenuManager : MonoBehaviour
     public GameObject noSoundEffects;
 
     private GameObject AudioManager;
+
+    public Button instagramButton;
+    public Button musicButton;
+    public Button noMusicButton;
+    public Button soundEffectsButton;
+    public Button noSoundEffectsButton;
 
     private void Start()
     {
@@ -77,6 +84,12 @@ public class MenuManager : MonoBehaviour
     {
         if (playClicked)
         {
+            instagramButton.GetComponent<Button>().interactable = false;
+            musicButton.GetComponent<Button>().interactable = false;
+            noMusicButton.GetComponent<Button>().interactable = false;
+            soundEffectsButton.GetComponent<Button>().interactable = false;
+            noSoundEffectsButton.GetComponent<Button>().interactable = false;
+
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0) 
             {

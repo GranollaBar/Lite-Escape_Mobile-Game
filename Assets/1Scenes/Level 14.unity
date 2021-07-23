@@ -17765,11 +17765,26 @@ PrefabInstance:
       value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: StaminaBar
+      value: 
+      objectReference: {fileID: 1816512706}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 
       objectReference: {fileID: 645412165}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+--- !u!114 &995974923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+  m_PrefabInstance: {fileID: 995974922}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &997290870
 GameObject:
   m_ObjectHideFlags: 0
@@ -24503,10 +24518,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8622829b7a71f048b0b5a21d1619e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTo: -500
+  moveTo: 500
   stamina: {fileID: 1816512706}
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
   levelCompleteTransition: {fileID: 1944004579}
+  pauseButton: {fileID: 995974923}
+  moveLeft: 1
 --- !u!114 &1527219610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28650,7 +28667,7 @@ GameObject:
   - component: {fileID: 1816512707}
   m_Layer: 5
   m_Name: Stamina Bar
-  m_TagString: Untagged
+  m_TagString: StaminaBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

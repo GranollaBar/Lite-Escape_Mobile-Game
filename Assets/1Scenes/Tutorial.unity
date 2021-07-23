@@ -1046,6 +1046,7 @@ MonoBehaviour:
   stamina: {fileID: 1531198824}
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
   levelCompleteTransition: {fileID: 889548979}
+  pauseButton: {fileID: 305161677}
 --- !u!114 &165113019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,6 +1609,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &305161677 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2112453448580225569, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+  m_PrefabInstance: {fileID: 4725592191584714720}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &320745385
 GameObject:
   m_ObjectHideFlags: 0
@@ -7722,9 +7734,13 @@ PrefabInstance:
       value: Pause Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: pauseTransition
+      value: 
+      objectReference: {fileID: 521119618}
+    - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: circleTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 145685497}
     - target: {fileID: 4580023817262927676, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -11228,7 +11244,7 @@ GameObject:
   - component: {fileID: 1531198825}
   m_Layer: 5
   m_Name: Stamina Bar
-  m_TagString: Untagged
+  m_TagString: StaminaBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14097,6 +14113,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 2112453448580225568, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: m_Color.a
+      value: 0.50980395
+      objectReference: {fileID: 0}
     - target: {fileID: 2112453449483695668, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: m_RootOrder
       value: 20
@@ -14145,6 +14165,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 6200000, guid: 206cda9def6aae34c8bd940d06c8bf0d, type: 2}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: StaminaBar
+      value: 
+      objectReference: {fileID: 1531198824}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 

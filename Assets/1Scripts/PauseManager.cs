@@ -212,5 +212,7 @@ public class PauseManager : MonoBehaviour
         StartCoroutine(PauseLeaveFade());
         pauseMenu.SetActive(false);
         pauseMenu.SetActive(true);
+
+        player.GetComponent<ballcontrol>().enabled = true;
     }
 }

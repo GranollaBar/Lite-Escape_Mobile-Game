@@ -6,17 +6,12 @@ TagManager:
   tags:
   - Enemy
   - Cinemachine
-  - HealthSystem
   - AutoMovePlayer
   - ExitDoor
   - LevelLoader
   - lights
   - arrowLight
-  - HealthManager
   - Wall
-  - Wall1
-  - Wall2
-  - Wall3
   - MainLights
   - Menu
   - Test
@@ -26,6 +21,8 @@ TagManager:
   - EndingLights
   - SecondLight
   - PauseMenu
+  - Pause
+  - StaminaBar
   layers:
   - Default
   - TransparentFX
