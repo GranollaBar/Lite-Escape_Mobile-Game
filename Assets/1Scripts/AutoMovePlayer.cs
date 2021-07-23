@@ -42,6 +42,7 @@ public class AutoMovePlayer : MonoBehaviour
             lights.SetActive(false);
             Destroy(player.GetComponent<ballcontrol>());
             Destroy(player.GetComponent<LineRenderer>());
+            Destroy(player.GetComponent<CircleCollider2D>());
             playerRb.bodyType = RigidbodyType2D.Kinematic;
             playerRb.constraints = RigidbodyConstraints2D.FreezePositionY; 
             movePlayer = true;
@@ -51,8 +52,11 @@ public class AutoMovePlayer : MonoBehaviour
             Time.timeScale = 1;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
-            FindObjectOfType<AudioManager>().Play("Victory");
-            FindObjectOfType<AudioManager>().Play("Clapping Sound");
+            if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+            {
+                FindObjectOfType<AudioManager>().Play("Victory");
+                FindObjectOfType<AudioManager>().Play("Clapping Sound");
+            }
 
             if (nextSceneLoad > PlayerPrefs.GetInt("levelAt"))
             {

@@ -351,189 +351,297 @@ public class LevelSelector : MonoBehaviour
 
     public void TutorialLevel()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         tutorialClicked = true;
     }
 
     public void Level1()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level1Clicked = true;
     }
 
     public void Level2()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level2Clicked = true;
     }
 
     public void Level3()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level3Clicked = true;
     }
 
     public void Level4()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level4Clicked = true;
     }
 
     public void Level5()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level5Clicked = true;
     }
 
     public void Level6()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level6Clicked = true;
     }
 
     public void Level7()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level7Clicked = true;
     }
 
     public void Level8()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level8Clicked = true;
     }
 
     public void Level9()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level9Clicked = true;
     }
 
     public void Level10()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level10Clicked = true;
     }
 
     public void Level11()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level11Clicked = true;
     }
 
     public void Level12()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level12Clicked = true;
     }
 
     public void Level13()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level13Clicked = true;
     }
 
     public void Level14()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level14Clicked = true;
     }
 
     public void Level15()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level15Clicked = true;
     }
 
     public void Level16()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level16Clicked = true;
     }
 
     public void Level17()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level17Clicked = true;
     }
 
     public void Level18()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level18Clicked = true;
     }
 
     public void Level19()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level19Clicked = true;
     }
 
     public void Level20()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level20Clicked = true;
     }
 
     public void Level21()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level21Clicked = true;
     }
 
     public void Level22()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level22Clicked = true;
     }
 
     public void Level23()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level23Clicked = true;
     }
 
     public void Level24()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level24Clicked = true;
     }
 
     public void Level25()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level25Clicked = true;
     }
 
     public void Level26()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         Level26Clicked = true;
     }

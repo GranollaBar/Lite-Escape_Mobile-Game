@@ -22,6 +22,10 @@ TagManager:
   - Test
   - LevelComplete
   - AudioManager
+  - text
+  - EndingLights
+  - SecondLight
+  - PauseMenu
   layers:
   - Default
   - TransparentFX
@@ -76,6 +80,12 @@ TagManager:
     locked: 0
   - name: Confetti
     uniqueID: 3298517001
+    locked: 0
+  - name: Pause Button
+    uniqueID: 602707743
+    locked: 0
+  - name: Pause Menu
+    uniqueID: 492562257
     locked: 0
   - name: Level Complete
     uniqueID: 1549820321

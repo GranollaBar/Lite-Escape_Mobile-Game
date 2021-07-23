@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 
-public class Level11Walls : MonoBehaviour
+public class Level20Walls : MonoBehaviour
 {
     private GameObject wall1;
 
     float wallCurrentTime = 0f;
-    float wallTime = 55f;
+    float wallTime = 35f;
 
     bool wallDone = false;
 
@@ -28,7 +28,11 @@ public class Level11Walls : MonoBehaviour
             {
                 wall1.SetActive(false);
                 wallDone = true;
-                FindObjectOfType<AudioManager>().Play("WallBreak");
+
+                if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+                {
+                    FindObjectOfType<AudioManager>().Play("WallBreak");
+                }
             }
         }
     }

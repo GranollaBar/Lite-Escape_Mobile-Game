@@ -28,7 +28,11 @@ public class Level1Walls : MonoBehaviour
             {
                 wall1.SetActive(false);
                 wallDone = true;
-                FindObjectOfType<AudioManager>().Play("WallBreak");
+
+                if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+                {
+                    FindObjectOfType<AudioManager>().Play("WallBreak");
+                }
             }
         }
     }

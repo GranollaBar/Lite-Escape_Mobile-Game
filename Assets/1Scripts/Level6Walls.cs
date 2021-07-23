@@ -5,7 +5,7 @@ public class Level6Walls : MonoBehaviour
     private GameObject wall1;
 
     float wallCurrentTime = 0f;
-    float wallTime = 31f;
+    float wallTime = 29f;
 
     bool wallDone = false;
 
@@ -28,7 +28,11 @@ public class Level6Walls : MonoBehaviour
             {
                 wall1.SetActive(false);
                 wallDone = true;
-                FindObjectOfType<AudioManager>().Play("WallBreak");
+
+                if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+                {
+                    FindObjectOfType<AudioManager>().Play("WallBreak");
+                }
             }
         }
     }

@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
     private float sceneStartTimer = 1.6f;
 
     private bool playClicked = false;
+    private bool ContinueSearching = false;
 
     public ParticleSystem playParticles;
 
@@ -18,17 +19,46 @@ public class MenuManager : MonoBehaviour
     public GameObject soundEffects;
     public GameObject noSoundEffects;
 
-    public bool Truemusic;
-    public bool TruesoundEffects;
-
     private GameObject AudioManager;
 
     private void Start()
     {
-        Truemusic = true;
-        TruesoundEffects = true;
-
         AudioManager = GameObject.FindGameObjectWithTag("AudioManager");
+
+        int NoMusicTutorial = PlayerPrefs.GetInt("NoMusicTutorial", 0);
+        int NoMusic = PlayerPrefs.GetInt("NoMusic", 0);
+        int NoSoundEffectsTutorial = PlayerPrefs.GetInt("NoSoundEffectsTutorial", 0);
+        int NoSoundEffectsMenu = PlayerPrefs.GetInt("NoSoundEffectsMenu", 0);
+        int NoSoundEffects = PlayerPrefs.GetInt("NoSoundEffects", 0);
+
+        music.SetActive(false);
+        noMusic.SetActive(false);
+        soundEffects.SetActive(false);
+        noSoundEffects.SetActive(false);
+
+        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 0) || (PlayerPrefs.GetInt("NoMusic") == 0))
+        {
+            music.SetActive(true);
+            noMusic.SetActive(false);
+        }
+
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            soundEffects.SetActive(true);
+            noSoundEffects.SetActive(false);
+        }
+
+        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 1) || (PlayerPrefs.GetInt("NoMusic") == 1))
+        {
+            music.SetActive(false);
+            noMusic.SetActive(true);
+        }
+
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 1) || (PlayerPrefs.GetInt("NoSoundEffects") == 1) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 1))
+        {
+            soundEffects.SetActive(false);
+            noSoundEffects.SetActive(true);
+        }
     }
 
     public System.Collections.IEnumerator CircleFade()
@@ -36,6 +66,7 @@ public class MenuManager : MonoBehaviour
         circleTransition.SetTrigger("Circle Start");
         yield return new WaitForSeconds(transitionTime);
     }
+
     public System.Collections.IEnumerator FlashFade()
     {
         fadeTransition.SetTrigger("Fade Start");
@@ -54,14 +85,34 @@ public class MenuManager : MonoBehaviour
                 playClicked = false;
             }
         }
+
+        if (ContinueSearching)
+        {
+            if ((PlayerPrefs.GetInt("NoMusic") == 0) || (PlayerPrefs.GetInt("NoMusicTutorial") == 0))
+            {
+                FindObjectOfType<AudioManager>().Play("Main Theme");
+                ContinueSearching = false;
+            }
+
+            else
+            {
+                FindObjectOfType<AudioManager>().StopPlay("Main Theme");
+                ContinueSearching = false;
+            }
+
+        }
     }
 
     public void PlayGame()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
-        StartCoroutine(CircleFade());
-        playClicked = true;
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         Instantiate(playParticles);
+        playClicked = true;
+        StartCoroutine(CircleFade());
     }
 
     public void Instagram()
@@ -71,34 +122,64 @@ public class MenuManager : MonoBehaviour
 
     public void playMusic()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         music.SetActive(true);
         noMusic.SetActive(false);
-        Truemusic = true;
+
+        PlayerPrefs.SetInt("NoMusicTutorial", 0);
+        PlayerPrefs.SetInt("NoMusic", 0);
+
+        ContinueSearching = true;
     }
 
     public void playSoundEffects()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         soundEffects.SetActive(true);
         noSoundEffects.SetActive(false);
-        TruesoundEffects = true;
+
+        PlayerPrefs.SetInt("NoSoundEffectsTutorial", 0);
+        PlayerPrefs.SetInt("NoSoundEffects", 0);
+        PlayerPrefs.SetInt("NoSoundEffectsMenu", 0); 
     }
 
 
     public void playNoMusic()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         music.SetActive(false);
         noMusic.SetActive(true);
-        Truemusic = false;
+
+        PlayerPrefs.SetInt("NoMusicTutorial", 1);
+        PlayerPrefs.SetInt("NoMusic", 1);
+
+        ContinueSearching = true;
     }
 
     public void playNoSoundEffects()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         soundEffects.SetActive(false);
         noSoundEffects.SetActive(true);
-        TruesoundEffects = false;
+
+        PlayerPrefs.SetInt("NoSoundEffectsTutorial", 1);
+        PlayerPrefs.SetInt("NoSoundEffects", 1);
+        PlayerPrefs.SetInt("NoSoundEffectsMenu", 1);
     }
 }
