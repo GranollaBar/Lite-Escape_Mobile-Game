@@ -7,7 +7,6 @@ public class PauseButton : MonoBehaviour
     private float transitionTime = 0.5f;
 
     private GameObject player;
-    private Rigidbody2D playerRb;
     public GameObject StaminaBar;
 
     private SpriteRenderer myRenderer;
@@ -16,7 +15,6 @@ public class PauseButton : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        playerRb = player.GetComponent<Rigidbody2D>();
 
         myRenderer = player.GetComponent<SpriteRenderer>();
         myTrailRenderer = player.GetComponent<TrailRenderer>();
@@ -36,7 +34,7 @@ public class PauseButton : MonoBehaviour
         }
 
         StartCoroutine(PauseFade());
-        playerRb.constraints = RigidbodyConstraints2D.FreezeAll;
+        player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         player.GetComponent<ballcontrol>().enabled = false;
 
         Time.timeScale = 1;

@@ -24,7 +24,7 @@ public class PauseManager : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private GameObject pauseMenu;
-
+ 
     private void Start()
     {
         AudioManager = GameObject.FindGameObjectWithTag("AudioManager");
@@ -35,6 +35,7 @@ public class PauseManager : MonoBehaviour
         noSoundEffects.SetActive(false);
 
         player = GameObject.FindGameObjectWithTag("Player");
+
         playerRb = player.GetComponent<Rigidbody2D>();
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 
@@ -156,6 +157,7 @@ public class PauseManager : MonoBehaviour
 
     public void playSoundEffects()
     {
+
         if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
         {
             FindObjectOfType<AudioManager>().Play("Click Sound");
@@ -208,11 +210,13 @@ public class PauseManager : MonoBehaviour
             FindObjectOfType<AudioManager>().Play("Click Sound");
         }
 
-        playerRb.constraints = RigidbodyConstraints2D.None;
         StartCoroutine(PauseLeaveFade());
+        playerRb.constraints = RigidbodyConstraints2D.None;
         pauseMenu.SetActive(false);
         pauseMenu.SetActive(true);
 
         player.GetComponent<ballcontrol>().enabled = true;
+        Vector3 newPos = new Vector3(player.transform.position.x + 0.001f, player.transform.position.y, player.transform.position.z);
+        player.transform.position = newPos;
     }
 }
