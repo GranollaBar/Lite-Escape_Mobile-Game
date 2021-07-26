@@ -64,21 +64,33 @@ public class LevelCompleteManager : MonoBehaviour
 
     public void HomeButton()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         homeClicked = true;
     }
 
     public void RestartButton()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         restartClicked = true;
     }
 
     public void NextLevelButton()
     {
-        FindObjectOfType<AudioManager>().Play("Click Sound");
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         StartCoroutine(CircleFade());
         nextLevelClicked = true;
     }

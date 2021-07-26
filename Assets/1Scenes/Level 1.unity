@@ -10579,6 +10579,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 1814443684}
+  pauseButton: {fileID: 2112453448928280820}
 --- !u!114 &1228535836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13960,6 +13961,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 720245944}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 2112453448928280820}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 
       objectReference: {fileID: 651765874}
@@ -14031,6 +14036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 2112453448928280820}
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: circleTransition
       value: 

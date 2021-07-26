@@ -3042,9 +3042,13 @@ PrefabInstance:
       value: Pause Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1782432184}
+    - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: circleTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 680592010}
     - target: {fileID: 4580023817262927676, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -14612,6 +14616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 1625676483}
+  pauseButton: {fileID: 1782432184}
 --- !u!114 &1661002788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14629,6 +14634,7 @@ MonoBehaviour:
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
   levelCompleteTransition: {fileID: 870728171}
   pauseButton: {fileID: 1782432184}
+  moveLeft: 0
 --- !u!114 &1661002789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15749,6 +15755,10 @@ PrefabInstance:
       propertyPath: StaminaBar
       value: 
       objectReference: {fileID: 1036991486}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1782432184}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 

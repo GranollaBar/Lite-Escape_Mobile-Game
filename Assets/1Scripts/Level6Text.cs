@@ -104,6 +104,21 @@ public class Level6Text : MonoBehaviour
                 tutItem.alreadyShown = true;
             }
         }
+
+        if (PlayerPrefs.GetInt("keepUpdating") == 1)
+        {
+            if (PlayerPrefs.GetInt("keepCounting") == 0)
+            {
+                timer.Start();
+                PlayerPrefs.SetInt("keepUpdating", 0);
+            }
+
+            if (PlayerPrefs.GetInt("keepCounting") == 1)
+            {
+                timer.Stop();
+                PlayerPrefs.SetInt("keepUpdating", 0);
+            }
+        }
     }
 
     private void DisableAllText()

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class KillPlayer : MonoBehaviour
     private float transitionTime = 1f;
 
     private int SceneLoad;
+
+    public Button pauseButton;
 
     void Start()
     {
@@ -125,6 +128,9 @@ public class KillPlayer : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().Play("Death Sound");
         }
+
+        player.GetComponent<ballcontrol>().enabled = false;
+        pauseButton.GetComponent<Button>().interactable = false;
 
         transition.SetTrigger("DeathStart");
         yield return new WaitForSeconds(transitionTime);

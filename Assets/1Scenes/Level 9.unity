@@ -2638,6 +2638,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 662442189}
+  pauseButton: {fileID: 1359555096}
 --- !u!114 &296476301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3849,7 +3850,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &416886574
 PrefabInstance:
@@ -5770,7 +5771,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &596360517
 PrefabInstance:
@@ -10627,9 +10628,13 @@ PrefabInstance:
       value: Pause Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1359555096}
+    - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: circleTransition
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 929566755}
     - target: {fileID: 4580023817262927676, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: m_Camera
       value: 
@@ -12668,6 +12673,10 @@ PrefabInstance:
       propertyPath: StaminaBar
       value: 
       objectReference: {fileID: 1451662885}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 1359555096}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 
@@ -15968,7 +15977,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1693257110
 PrefabInstance:

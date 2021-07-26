@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour
 {
@@ -12,12 +13,17 @@ public class PauseButton : MonoBehaviour
     private SpriteRenderer myRenderer;
     private TrailRenderer myTrailRenderer;
 
-    private void Start()
+    public Button pauseButton;
+
+    void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
 
         myRenderer = player.GetComponent<SpriteRenderer>();
         myTrailRenderer = player.GetComponent<TrailRenderer>();
+
+        int keepCounting = PlayerPrefs.GetInt("keepCounting", 0);
+        int keepUpdating = PlayerPrefs.GetInt("keepUpdating", 0);
     }
 
     public System.Collections.IEnumerator PauseFade()
@@ -36,15 +42,22 @@ public class PauseButton : MonoBehaviour
         StartCoroutine(PauseFade());
         player.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeAll;
         player.GetComponent<ballcontrol>().enabled = false;
+        player.GetComponent<LineRenderer>().enabled = false;
+        player.GetComponent<TrailRenderer>().enabled = false;
 
         Time.timeScale = 1;
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
         StaminaBar.SetActive(false);
 
+        pauseButton.GetComponent<Button>().interactable = false;
+
         myRenderer.color = new Color(1f, 1f, 1f);
 
         myTrailRenderer.startColor = Color.white;
         myTrailRenderer.endColor = Color.black;
+
+        PlayerPrefs.SetInt("keepCounting", 1);
+        PlayerPrefs.SetInt("keepUpdating", 1); 
     }
 }

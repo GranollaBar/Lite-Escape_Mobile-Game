@@ -1042,11 +1042,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8622829b7a71f048b0b5a21d1619e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveTo: 0
+  moveTo: 200
   stamina: {fileID: 1531198824}
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
   levelCompleteTransition: {fileID: 889548979}
   pauseButton: {fileID: 305161677}
+  moveLeft: 0
 --- !u!114 &165113019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1101,6 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 436554879}
+  pauseButton: {fileID: 0}
 --- !u!1 &176753007
 GameObject:
   m_ObjectHideFlags: 0
@@ -7734,6 +7736,10 @@ PrefabInstance:
       value: Pause Menu
       objectReference: {fileID: 0}
     - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 305161677}
+    - target: {fileID: 4580023817052446287, guid: 9f4ec1497cb5c11498084ba843c4f06d, type: 3}
       propertyPath: pauseTransition
       value: 
       objectReference: {fileID: 521119618}
@@ -14173,6 +14179,10 @@ PrefabInstance:
       propertyPath: StaminaBar
       value: 
       objectReference: {fileID: 1531198824}
+    - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 305161677}
     - target: {fileID: 2112453449483695675, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: pauseTransition
       value: 

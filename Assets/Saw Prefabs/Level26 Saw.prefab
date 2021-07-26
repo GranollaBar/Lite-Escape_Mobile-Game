@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0d81e3a99200e32448a59bac85574380, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.26415092, g: 0.25268778, b: 0.25268778, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -132,6 +132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe170895272fdad4c97faec9917db52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawn: 0
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 0}
+  pauseButton: {fileID: 0}

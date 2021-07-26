@@ -18,6 +18,8 @@ public class AutoMovePlayer : MonoBehaviour
     private int nextSceneLoad;
     public Button pauseButton;
     public bool moveLeft;
+    private SpriteRenderer playerSpriteRenderer;
+    private TrailRenderer playerTrailRenderer;
 
 
     void Start()
@@ -28,6 +30,8 @@ public class AutoMovePlayer : MonoBehaviour
         playerRb = player.GetComponent<Rigidbody2D>();
         playerPosition = player.GetComponent<Transform>();
         nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
+        playerSpriteRenderer = player.GetComponent<SpriteRenderer>();
+        playerTrailRenderer = player.GetComponent<TrailRenderer>();
     }
 
     public System.Collections.IEnumerator CompleteLevel()
@@ -67,6 +71,11 @@ public class AutoMovePlayer : MonoBehaviour
             }
 
             pauseButton.GetComponent<Button>().interactable = false;
+
+            playerSpriteRenderer.color = new Color(1f, 1f, 1f);
+
+            playerTrailRenderer.startColor = Color.white;
+            playerTrailRenderer.endColor = Color.black;
 
             StartCoroutine(CompleteLevel());
         }

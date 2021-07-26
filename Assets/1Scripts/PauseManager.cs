@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class PauseManager : MonoBehaviour
     private Rigidbody2D playerRb;
 
     private GameObject pauseMenu;
+
+    public Button pauseButton;
  
     private void Start()
     {
@@ -125,6 +128,9 @@ public class PauseManager : MonoBehaviour
         }
 
         homeClicked = true;
+        PlayerPrefs.SetInt("NoContinueTimer", 0);
+        PlayerPrefs.SetInt("keepUpdating", 1);
+        PlayerPrefs.SetInt("keepCounting", 0);
         StartCoroutine(CircleFade());
     }
 
@@ -136,6 +142,9 @@ public class PauseManager : MonoBehaviour
         }
 
         restartClicked = true;
+        PlayerPrefs.SetInt("NoContinueTimer", 0);
+        PlayerPrefs.SetInt("keepUpdating", 1);
+        PlayerPrefs.SetInt("keepCounting", 0);
         StartCoroutine(CircleFade());
     }
 
@@ -216,7 +225,14 @@ public class PauseManager : MonoBehaviour
         pauseMenu.SetActive(true);
 
         player.GetComponent<ballcontrol>().enabled = true;
+        player.GetComponent<LineRenderer>().enabled = true;
+        player.GetComponent<TrailRenderer>().enabled = true;
         Vector3 newPos = new Vector3(player.transform.position.x + 0.001f, player.transform.position.y, player.transform.position.z);
         player.transform.position = newPos;
+
+        pauseButton.GetComponent<Button>().interactable = true;
+
+        PlayerPrefs.SetInt("keepUpdating", 1);
+        PlayerPrefs.SetInt("keepCounting", 0);
     }
 }
