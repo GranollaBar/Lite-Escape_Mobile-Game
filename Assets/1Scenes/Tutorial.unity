@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 436554879}
-  pauseButton: {fileID: 0}
+  pauseButton: {fileID: 305161677}
 --- !u!1 &176753007
 GameObject:
   m_ObjectHideFlags: 0
@@ -14121,7 +14121,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 2112453448580225568, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: m_Color.a
-      value: 0.50980395
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2112453449483695668, guid: 284997b4617273643b10e5ff1916d207, type: 3}
       propertyPath: m_RootOrder

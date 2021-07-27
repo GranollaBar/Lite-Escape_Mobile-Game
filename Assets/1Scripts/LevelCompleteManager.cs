@@ -6,7 +6,7 @@ public class LevelCompleteManager : MonoBehaviour
     public Animator circleTransition;
 
     private float transitionTime = 1f;
-    private float sceneStartTimer = 1.6f;
+    private float sceneStartTimer = 2f;
 
     private bool homeClicked = false;
     private bool restartClicked = false;

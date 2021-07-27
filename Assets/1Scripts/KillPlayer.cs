@@ -35,6 +35,7 @@ public class KillPlayer : MonoBehaviour
         int TextDestoryLevel20 = PlayerPrefs.GetInt("TextDestoryLevel20", 0);
         int TextDestoryLevel21 = PlayerPrefs.GetInt("TextDestoryLevel21", 0);
         int TextDestoryLevel25 = PlayerPrefs.GetInt("TextDestoryLevel25", 0);
+        int TextDestoryLevel26 = PlayerPrefs.GetInt("TextDestoryLevel26", 0);
 
 
         SceneLoad = SceneManager.GetActiveScene().buildIndex;
@@ -115,6 +116,11 @@ public class KillPlayer : MonoBehaviour
         if (SceneLoad == 27)
         {
             PlayerPrefs.SetInt("TextDestoryLevel25", 1);
+        }
+
+        if (SceneLoad == 28)
+        {
+            PlayerPrefs.SetInt("TextDestoryLevel26", 1);
         }
 
         Instantiate(deathParticles, transform.position, Quaternion.identity);

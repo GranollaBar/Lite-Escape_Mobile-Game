@@ -8,7 +8,7 @@ public class PauseManager : MonoBehaviour
     public Animator pauseTransition;
 
     private float transitionTime = 1f;
-    private float sceneStartTimer = 1.6f;
+    private float sceneStartTimer = 2f;
 
     private bool homeClicked = false;
     private bool restartClicked = false;
@@ -42,7 +42,7 @@ public class PauseManager : MonoBehaviour
         playerRb = player.GetComponent<Rigidbody2D>();
         pauseMenu = GameObject.FindGameObjectWithTag("PauseMenu");
 
-        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 0) || (PlayerPrefs.GetInt("NoMusic") == 0))
+        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 0) || (PlayerPrefs.GetInt("NoMusic") == 0) || (PlayerPrefs.GetInt("NoMusicLevel26") == 0))
         {
             music.SetActive(true);
             noMusic.SetActive(false);
@@ -54,7 +54,7 @@ public class PauseManager : MonoBehaviour
             noSoundEffects.SetActive(false);
         }
 
-        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 1) || (PlayerPrefs.GetInt("NoMusic") == 1))
+        if ((PlayerPrefs.GetInt("NoMusicTutorial") == 1) || (PlayerPrefs.GetInt("NoMusic") == 1) || (PlayerPrefs.GetInt("NoMusicLevel26") == 1))
         {
             music.SetActive(false);
             noMusic.SetActive(true);
@@ -160,6 +160,7 @@ public class PauseManager : MonoBehaviour
 
         PlayerPrefs.SetInt("NoMusicTutorial", 0);
         PlayerPrefs.SetInt("NoMusic", 0);
+        PlayerPrefs.SetInt("NoMusicLevel26", 0);
 
         ContinueSearching = true;
     }
@@ -193,6 +194,7 @@ public class PauseManager : MonoBehaviour
 
         PlayerPrefs.SetInt("NoMusicTutorial", 1);
         PlayerPrefs.SetInt("NoMusic", 1);
+        PlayerPrefs.SetInt("NoMusicLevel26", 1);
 
         ContinueSearching = true;
     }

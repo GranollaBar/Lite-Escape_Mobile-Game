@@ -7,7 +7,7 @@ public class LevelSelector : MonoBehaviour
     public Animator circleTransition;
 
     private float transitionTime = 1f;
-    private float sceneStartTimer = 1.6f;
+    private float sceneStartTimer = 2f;
 
     private bool tutorialClicked = false;
     private bool Level1Clicked = false;

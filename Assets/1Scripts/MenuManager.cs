@@ -8,7 +8,7 @@ public class MenuManager : MonoBehaviour
     public Animator fadeTransition;
 
     private float transitionTime = 1f;
-    private float sceneStartTimer = 1.6f;
+    private float sceneStartTimer = 2f;
 
     private bool playClicked = false;
     private bool ContinueSearching = false;
@@ -34,6 +34,7 @@ public class MenuManager : MonoBehaviour
 
         int NoMusicTutorial = PlayerPrefs.GetInt("NoMusicTutorial", 0);
         int NoMusic = PlayerPrefs.GetInt("NoMusic", 0);
+        int NoMusicLevel26 = PlayerPrefs.GetInt("NoMusicLevel26", 0);
         int NoSoundEffectsTutorial = PlayerPrefs.GetInt("NoSoundEffectsTutorial", 0);
         int NoSoundEffectsMenu = PlayerPrefs.GetInt("NoSoundEffectsMenu", 0);
         int NoSoundEffects = PlayerPrefs.GetInt("NoSoundEffects", 0);
@@ -145,6 +146,7 @@ public class MenuManager : MonoBehaviour
 
         PlayerPrefs.SetInt("NoMusicTutorial", 0);
         PlayerPrefs.SetInt("NoMusic", 0);
+        PlayerPrefs.SetInt("NoMusicLevel26", 0);
 
         ContinueSearching = true;
     }
@@ -177,6 +179,7 @@ public class MenuManager : MonoBehaviour
 
         PlayerPrefs.SetInt("NoMusicTutorial", 1);
         PlayerPrefs.SetInt("NoMusic", 1);
+        PlayerPrefs.SetInt("NoMusicLevel26", 1);
 
         ContinueSearching = true;
     }

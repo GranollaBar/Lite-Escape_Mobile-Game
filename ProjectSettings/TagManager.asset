@@ -23,6 +23,8 @@ TagManager:
   - PauseMenu
   - Pause
   - StaminaBar
+  - finalCanvas
+  - finalTextCanvas
   layers:
   - Default
   - TransparentFX
@@ -86,6 +88,12 @@ TagManager:
     locked: 0
   - name: Level Complete
     uniqueID: 1549820321
+    locked: 0
+  - name: Final Fade
+    uniqueID: 1291411803
+    locked: 0
+  - name: Final Text Layer
+    uniqueID: 4170697847
     locked: 0
   - name: Circle Fade
     uniqueID: 3638856659
