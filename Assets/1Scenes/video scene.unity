@@ -4029,6 +4029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathParticles: {fileID: 4516434757263752578, guid: 8014b5b4f7c65744da9bb24347cc80e5, type: 3}
   transition: {fileID: 1644179961}
+  pauseButton: {fileID: 0}
 --- !u!114 &748238612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,6 +4045,9 @@ MonoBehaviour:
   moveTo: -300
   stamina: {fileID: 1178176262}
   confettiParticles: {fileID: 8380422249570785148, guid: d217e964ff2e72c4cac125f76adc2b96, type: 3}
+  levelCompleteTransition: {fileID: 0}
+  pauseButton: {fileID: 0}
+  moveUp: 0
 --- !u!114 &748238613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4060,10 +4064,6 @@ MonoBehaviour:
   rb: {fileID: 748238617}
   minpower: {x: -4, y: -4}
   maxpower: {x: 4, y: 4}
-  staminaBar: {fileID: 371593375}
-  maxStamina: 6
-  staminaLoss: 10
-  stamina: {fileID: 1178176262}
 --- !u!96 &748238614
 TrailRenderer:
   serializedVersion: 2
@@ -14864,7 +14864,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878369264}
-  - component: {fileID: 1878369263}
   m_Layer: 0
   m_Name: Lights
   m_TagString: Untagged
@@ -14872,19 +14871,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1878369263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1878369262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c2785872e85d54ea103ffac3334a6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wall1: {fileID: 1843357895}
 --- !u!4 &1878369264
 Transform:
   m_ObjectHideFlags: 0
