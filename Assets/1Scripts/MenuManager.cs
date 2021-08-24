@@ -27,6 +27,7 @@ public class MenuManager : MonoBehaviour
     public Button noMusicButton;
     public Button soundEffectsButton;
     public Button noSoundEffectsButton;
+    public Button privacyPolicyButton;
 
     private void Start()
     {
@@ -90,6 +91,7 @@ public class MenuManager : MonoBehaviour
             noMusicButton.GetComponent<Button>().interactable = false;
             soundEffectsButton.GetComponent<Button>().interactable = false;
             noSoundEffectsButton.GetComponent<Button>().interactable = false;
+            privacyPolicyButton.GetComponent<Button>().interactable = false;
 
             sceneStartTimer -= Time.deltaTime;
             if (sceneStartTimer <= 0) 
@@ -131,6 +133,11 @@ public class MenuManager : MonoBehaviour
 
     public void Instagram()
     {
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
         Application.OpenURL("https://www.instagram.com/granolla__bar/");
     }
 
@@ -197,5 +204,15 @@ public class MenuManager : MonoBehaviour
         PlayerPrefs.SetInt("NoSoundEffectsTutorial", 1);
         PlayerPrefs.SetInt("NoSoundEffects", 1);
         PlayerPrefs.SetInt("NoSoundEffectsMenu", 1);
+    }
+
+    public void privacyPolicy()
+    {
+        if ((PlayerPrefs.GetInt("NoSoundEffectsTutorial") == 0) || (PlayerPrefs.GetInt("NoSoundEffects") == 0) || (PlayerPrefs.GetInt("NoSoundEffectsMenu") == 0))
+        {
+            FindObjectOfType<AudioManager>().Play("Click Sound");
+        }
+
+        Application.OpenURL("https://docs.google.com/document/d/1RF3e1CHGmu1guV_IXhp9FkRLl5fQA2gBvpibpF2NYLo/edit?usp=sharing");
     }
 }
